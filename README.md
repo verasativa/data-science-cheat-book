@@ -1,11 +1,18 @@
-# Verae data science cheat sheet
+# Verae data science cheat-sheet
+## Table of content
 ## Clasical statistics
 ### Probability theory
-Probability theory is the mathematical fundation for statisctics, but in contrast to probability theory statistcs is an applied science corcerned with analysis and modeling of data. Check out Thomas Bayes, Pierre-Simon Laplace and Carl Gauss for history.
-#### Bayes rule
-#### Exploratory data analysis
-Check out John W. Tujey for history.
-#### Estimates of location
+Probability theory is the mathematical fundation for statisctics, but in contrast to probability theory statistcs is an applied science corcerned with analysis and modeling of data. Check out [Thomas Bayes](https://en.wikipedia.org/wiki/Thomas_Bayes), [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace) and [Carl Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) for history.
+
+#### Bayes' rule:
+Bayes' rule describes the probability of an event, based on prior knowledge of conditions that might be related to the event.
+
+$$ P(A|B) = \frac{P(B|A) P(A)}{P(B)} $$
+
+#### Exploratory data analysis:
+Check out [John Tukey](https://en.wikipedia.org/wiki/John_Tukey) for history.
+
+#### Estimates of location:
  - Mean / average (the sum of all values divided by the number of values)
  - Weighted mean (the sum of all values divided by the sum of weights)
  - Median (the value that half values lies above and hafl lies belows)
@@ -13,7 +20,8 @@ Check out John W. Tujey for history.
  - Trimmed mean (averages after n "extreme values" are removed from top and buttom)
  - Robust (not sensitive to extreme values)
  - Outlier (values very diferent from most of data)
-#### Estimates of variability
+ 
+#### Estimates of variability:
 Variability also called dispersion, measure whether the data values are tighly clustered or spread out.
  - Deviations / errors / residuals (the difference between the observed values and estimate of location)
  - Variance / mean squared error (the sum of squared deviations from mean divided by values count - 1)
@@ -24,9 +32,11 @@ Variability also called dispersion, measure whether the data values are tighly c
  - Order statistics / ranks (Metrics based on the data values sorted from smallest to biggests)
  - Percentile / quantile (the value such P percent of the values take on this values or less and 100-P take on this value or more)
  - Interqurtile range / IQR (The diference between the 75th percentile and the 25th percentile)
-#### Exploring distribution
-##### Boxplot / box and whiskers plot
+ 
+#### Exploring distribution:
+##### Boxplot / box and whiskers plot:
 A plot ntroduced by [Tukey](https://en.wikipedia.org/wiki/John_Tukey) as a quick way to visualize the distribution of data, 
+
 ```python
 # Pandas example
 df = pd.DataFrame(np.random.rand(10, 5), columns=['A', 'B', 'C', 'D', 'E'])
@@ -34,32 +44,50 @@ df.plot.box()
 ```
 <img src="img/box_plot_new.png">
 
-## Machine learning
+## Machine learning:
 Machine learning ecompases all.
 
 <img src="img/ml_map.png">
-    
+
+### Simple Vector Machine
+[multiclass SVM](http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/)
   
 ### Deep learning
 Deep learning is any algoritm more than 1 layer of perceptrons. Input layer units = fearues, output units = labels (one if is a regression).
 <img src="img/network_diagram.png">
 
-#### Activation function
+#### Activation function:
 After multiplying each imput x for it's corresponging weight, and added the bias. The perseptron shoud decide if to activate and how much, this is the job activation function. Teorically sigmoid the introductory, in practice ReLU or leakyReLU its used.
 <img src="img/activation.png">
 
-#### Feed fordward and backwards
+#### Feed fordward and backwards:
 Feed fordward is the process of getting predictions, feeding the network with features and ending with labels / value(s) predictions.
 The result of each perceptron can be noted as:
 $$\hat{y} = \sigma(w_1 x_1 + w_2 x_2 + b)$$
 where y hat is the output, sigma the [activation function](#Activation-function), for each input x is a weight w, and a bias b is added.
 <img src="img/backprop_diagram.png">
-#### Layers
+
+#### Layers types:
  - Direct connected layers
  - Convolutional layers
  - Pooling layers
  
+#### Weights inicialization:
+Good practice is to start your weights randomly in the range of $[-y, y]$ where $y=1/\sqrt{n}$   ($n$ is the number of inputs to a given neuron).  Optimally random normal distribution having a mean of 0 and a standard deviation of $y=1/\sqrt{n}$, so most of the values are close to 0.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 #### Code snipets:
+##### Data loaders:
+
 ##### GPU auto:
 ```python
 import torch
