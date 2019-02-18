@@ -1,5 +1,5 @@
 # Verae data science cheat-book
-I'm Vera, and this is my cheat-book. If you want correct, complete or add something, don't hesitate to do a pull request. Check out a [smaller but pretty useful cheat sheet I found while writing this](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning).
+I'm Vera, and this is my cheat-book. If you want correct, complete or add something, don't hesitate to do a pull request. Check out a [smaller but pretty useful cheat sheet(https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning) I found while writing this].
 ## Table of content
 ## Clasical statistics
 ### Probability theory
@@ -66,7 +66,7 @@ df.plot.box()
  - Bar charts
  - Pie Charts ([Florence Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale))
 
-## Machine learning:
+## Machine learning
 Machine learning ecompases all.
 
 <img src="img/ml_map.png">
@@ -95,7 +95,7 @@ where y hat is the output, sigma the [activation function](#Activation-function)
  - Pooling layers
 
 #### Weights inicialization:
-Good practice is to start your weights randomly in the range of $[-y, y]$ where $y=1/\sqrt{n}$   ($n$ is the number of inputs to a given neuron).  Optimally random normal distribution having a mean of 0 and a standard deviation of $y=1/\sqrt{n}$, so most of the values are close to 0.
+Good practice is to start your weights randomly in the range of $$[-y, y]$ where $y=1/\sqrt{n}$$   ($$n$$ is the number of inputs to a given neuron).  Optimally random normal distribution having a mean of 0 and a standard deviation of $$y=1/\sqrt{n}$$, so most of the values are close to 0.
 
 
 
