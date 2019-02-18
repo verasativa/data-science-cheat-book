@@ -2,9 +2,16 @@
 ---
 
 @import "{{ site.theme }}";
+body {
+  background: none;
+  font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+}
 header {
   padding: 0;
   position: relative;
+  h1 {
+    font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+  }
 }
 nav {
   top: 100px;
