@@ -10,12 +10,17 @@ header {
   padding: 0;
   position: relative;
   h1 {
-    font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+    font-family: Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
   }
 }
 nav {
   top: 100px;
+  margin-left: -46%;
 }
 section {
   margin-top: 20px;
+  width: auto;
+}
+.wrapper{
+  width: 70%;
 }
