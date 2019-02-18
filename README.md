@@ -95,7 +95,7 @@ where y hat is the output, sigma the [activation function](#Activation-function)
  - Pooling layers
 
 #### Weights inicialization:
-Good practice is to start your weights randomly in the range of $$[-y, y]$ where $y=1/\sqrt{n}$$   ($$n$$ is the number of inputs to a given neuron).  Optimally random normal distribution having a mean of 0 and a standard deviation of $$y=1/\sqrt{n}$$, so most of the values are close to 0.
+Good practice is to start your weights randomly in the range of $$[-y, y]$$ where $$y=1/\sqrt{n}$$   ($$n$$ is the number of inputs to a given neuron).  Optimally random normal distribution having a mean of 0 and a standard deviation of $$y=1/\sqrt{n}$$, so most of the values are close to 0.
 
 
 
