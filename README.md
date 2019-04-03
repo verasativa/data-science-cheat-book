@@ -1,9 +1,9 @@
 # Verae data science cheat-book
-I'm Vera, and this is my cheat-book. If you want correct, complete or add something, don't hesitate to do a pull request. Check out a [smaller but pretty useful cheat sheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning) I found while writing this].
+I'm Vera, and this is my cheat-book. If you want correct, complete or add something, don't hesitate to do a pull request. Check out a [smaller but uber-useful cheat sheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning) I found while writing this].
 ## Table of content
-## Clasical statistics
+## Classical statistics
 ### Probability theory
-Probability theory is the mathematical fundation for statisctics, but in contrast to probability theory statistcs is an applied science corcerned with analysis and modeling of data. Check out [Thomas Bayes](https://en.wikipedia.org/wiki/Thomas_Bayes), [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace) and [Carl Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) for history.
+Probability theory is the mathematical foundation for statistics, but in contrast to probability theory statistics is an applied science concerned with analysis and modelling of data. Check out [Thomas Bayes](https://en.wikipedia.org/wiki/Thomas_Bayes), [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace) and [Carl Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) for history.
 
 #### Bayes' rule:
 Bayes' rule describes the probability of an event, based on prior knowledge of conditions that might be related to the event.
@@ -24,16 +24,16 @@ Yuri Carvajal's check list:
   3. Identify modes, asymmetries, outliers, clusters, correlations and other patterns
   4. Identify statistical inconsistencies
   5. Identify technical (domain) inconsistencies
-  6. Compatibilty with other users (export to csv, sql, etc)
+  6. Compatibility with other users (export to csv, sql, etc)
 
 #### Estimates of location:
  - Mean / average (the sum of all values divided by the number of values)
  - Weighted mean (the sum of all values divided by the sum of weights)
- - Median (the value that half values lies above and hafl lies belows)
+ - Median (the value that half values lies above and half lies below)
  - Weighted median
- - Trimmed mean (averages after n "extreme values" are removed from top and buttom)
+ - Trimmed mean (averages after n "extreme values" are removed from top and bottom)
  - Robust (not sensitive to extreme values)
- - Outlier (values very diferent from most of data)
+ - Outlier (values very different from most of data)
 
 #### Estimates of variability:
 Variability also called dispersion, measure whether the data values are tighly clustered or spread out.
@@ -67,7 +67,7 @@ df.plot.box()
  - Pie Charts ([Florence Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale))
 
 ## Machine learning
-Machine learning ecompases all.
+Machine learning encompasses all.
 
 <img src="img/ml_map.png">
 
@@ -75,15 +75,15 @@ Machine learning ecompases all.
 [multiclass SVM](http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/)
 
 ### Deep learning
-Deep learning is any algoritm more than 1 layer of perceptrons. Input layer units = fearues, output units = labels (one if is a regression).
+Deep learning is any algorithm more than 1 layer of perceptrons. Input layer units = features, output units = labels (one if is a regression).
 <img src="img/network_diagram.png">
 
 #### Activation function:
-After multiplying each imput x for it's corresponging weight, and added the bias. The perseptron shoud decide if to activate and how much, this is the job activation function. Teorically sigmoid the introductory, in practice ReLU or leakyReLU its used.
+After multiplying each input x for it's corresponding weight, and added the bias. The perceptron should decide if to activate and how much, this is the job activation function. Theorically sigmoid the introductory, in practice ReLU or leakyReLU its used.
 <img src="img/activation.png">
 
-#### Feed fordward and backwards:
-Feed fordward is the process of getting predictions, feeding the network with features and ending with labels / value(s) predictions.
+#### Feed forward and backwards:
+Feed forward is the process of getting predictions, feeding the network with features and ending with labels / value(s) predictions.
 The result of each perceptron can be noted as:
 $$\hat{y} = \sigma(w_1 x_1 + w_2 x_2 + b)$$
 where y hat is the output, sigma the [activation function](#Activation-function), for each input x is a weight w, and a bias b is added.
@@ -93,19 +93,36 @@ where y hat is the output, sigma the [activation function](#Activation-function)
  - Direct connected layers
  - Convolutional layers
  - Pooling layers
+ - RNN
 
-#### Weights inicialization:
-Good practice is to start your weights randomly in the range of $$[-y, y]$$ where $$y=1/\sqrt{n}$$   ($$n$$ is the number of inputs to a given neuron).  Optimally random normal distribution having a mean of 0 and a standard deviation of $$y=1/\sqrt{n}$$, so most of the values are close to 0.
+#### Weights initialisation:
+Good practice is to start your weights randomly in the range of $[-y, y]$ where: $$y=1/\sqrt{n}$$   ($n$ is the number of inputs to a given neuron). Optimally random normal distribution having a mean of 0 and a standard deviation of $y=1/\sqrt{n}$, so most of the values are close to 0.
+
+#### Architectures:
+#### Convolutional Neural Networks:
+CNNs are nn architectures mostly for image/video processing, where the input its converted to narrow ($x$ and $y$) but deeper ($z$) layers. 
+
+<img src="img/CNN_all_layers.png">
+
+##### CNN Models:
+ - [Squeeze Next](https://github.com/amirgholami/SqueezeNext)
+
+##### Transfer learning:
+Most of "real world" cases, you will do a transfer learning from a pre-trained model, like ImageNet take weeks on multiple GPUs. Using all but last layers as feature extractors (freezing its weights) and re-training only last layer (red in image) as classifier for you custom task.
+
+<img src="img/vgg_16_architecture.png">
 
 
+##### Auto encoders
+Using the same logic of transfer learning, you can "upsample" the features using **transpose convolutional layers**
 
+<img src="img/conv_enc_2.png" />
 
+This is useful for compressing and denoising images ("convolutable" data).
+<img src="img/autoencoder_denoise.png">
 
-
-
-
-
-
+#### Style transfer
+If you can extract features with the previous techniques focusing on the last layer, then, focusing on the previous layers, you can extract "style". The simplest example of this is called style transfer, where you can transfer "the style" from an image and combine with "content" (features) in a new image. [Check out torch docs](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html).
 
 #### Code snipets:
 ##### Data loaders:
