@@ -1,6 +1,7 @@
 # Verae data science cheat-book
 I'm Vera, and this is my cheat-book. If you want correct, complete or add something, don't hesitate to do a pull request. Check out a [smaller but uber-useful cheat sheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning) I found while writing this.
 ## Table of content
+...pending
 ## Classical statistics
 ### Probability theory
 Probability theory is the mathematical foundation for statistics, but in contrast to probability theory statistics is an applied science concerned with analysis and modelling of data. Check out [Thomas Bayes](https://en.wikipedia.org/wiki/Thomas_Bayes), [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace) and [Carl Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) for history.
