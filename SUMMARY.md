@@ -1,4 +1,4 @@
-#### Recipes, plots, ecuations and code snippets for the lazy data scientist
+### Recipes, plots, ecuations and code snippets for the lazy data scientist
 
 
 * [What is Verae data science cheat-book](README.md)
