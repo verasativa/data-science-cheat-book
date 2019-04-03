@@ -1,11 +1,11 @@
-## Recipes, plots, ecuations and code snipets for the lazy data scientist
+#### _Recipes, plots, ecuations and code snippets for the lazy data scientist_
 
 
 * [What is Verae data science cheat-book](README.md)
-* [Classical statistics](README.md#Classical-statistics)
-    * [Probability theory](README.md#Probability-theory)
-    * [Exploratory data analysis](README.md#Exploratory-data-analysis%3A)
-    * [Estimates of location](README.md#Estimates-of-location%3A)
+* [Classical statistics](README.md#classical-statistics)
+    * [Probability theory](README.md#probability-theory)
+    * [Exploratory data analysis](README.md#exploratory-data-analysis%3A)
+    * [Estimates of location](README.md#estimates-of-location%3A)
     * [Estimates of variability]()
     * [Exploring distribution]()
-* [Machine Learning](README.md#Machine-learning)
+* [Machine Learning](README.md#machine-learning)
