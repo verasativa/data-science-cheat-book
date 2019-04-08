@@ -11,3 +11,5 @@ Icon
 ._*
 # jupyter notebooks checkpoints
 .ipynb_checkpoints
+# Local build
+_site

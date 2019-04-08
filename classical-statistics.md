@@ -10,7 +10,7 @@ $$ P(A|B) = \frac{P(B|A) P(A)}{P(B)} $$
 ### Exploratory data analysis
 Check out [John Tukey](https://en.wikipedia.org/wiki/John_Tukey) for history.
 
-Yuri Carvajal's check list:
+#### Yuri Carvajal's check list
 
  1. Identify the dataset:
        - What's dataset source?
@@ -52,7 +52,7 @@ Variability also called dispersion, measure whether the data values are tighly c
  - Box / box and whiskers plot
  - Frecuency table and histograms
  - Density Estimates
- 
+
 #### Boxplot / box and whiskers plot
 A plot ntroduced by [Tukey](https://en.wikipedia.org/wiki/John_Tukey) as a quick way to visualize the distribution of data,
 
