@@ -87,7 +87,7 @@ GAN's are unsupervised model, that allow to generate new data. They are two coup
 Both networks learn together, as the second net become better at classify inputs, the first has to become better at generating them in order to "fool it".  
 <img src="img/gans.jpg" />
 
-#### DCGAN (Deep Convolutional Generative Adversarial Network)
+#### Deep Convolutional Generative Adversarial Network (2016)
 Are specialized GAN on spacial data, where:
 * The discriminator: its a convolutional neural network that aims to classify data as real or fake
 * The generator: its a transpose convolutional network that aims to upsample a latent veztor $$z$$ and generate realistic images that can fool the discriminator.
@@ -100,6 +100,15 @@ __Architecture guidelines for stable DCGANs:__
 * Use LeakyReLU activation in the discriminator for all layers
 
 DCGAN paper: [Unsupervised Representational Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/pdf/1511.06434.pdf)
+
+## Batch normalization (2015)
+The idea is that, instead of just normalizing the inputs to the network, we normalize the inputs to every layer _within_ the network.  
+It's called "batch" normalization because, during __training__, we normalize each layer's inputs by using the _mean_ and _standard deviation_ (or variance) of the values in the current batch. These are sometimes called the __batch statistics__.
+
+> Specifically, batch normalization normalizes the output of a previous layer by __subtracting the batch mean and dividing by the batch standard deviation__.
+
+
+Batch normalization paper:  [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
 
 ## Code snippets
 ### Data loaders
