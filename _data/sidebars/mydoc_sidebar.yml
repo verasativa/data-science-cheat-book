@@ -3,14 +3,13 @@
 entries:
 - title: sidebar
   product: Recipes, plots, ecuations and code snippets for lazy data scientists 👩🏻‍💻😎
-  accordion: False
 #  version:
   folders:
   - title: Index
     output: web, pdf
     folderitems:
     - title: Introduction
-      url: /intro.html
+      url: /index.html
       output: web, pdf
       type: homepage
     - title: Classical statistics
