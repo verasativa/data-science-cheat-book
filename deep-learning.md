@@ -54,7 +54,54 @@ This is useful for compressing and denoising images ("convolutable" data).
 #### Style transfer
 If you can extract features with the previous techniques focusing on the last layer, then, focusing on the previous layers, you can extract "style". The simplest example of this is called style transfer, where you can transfer "the style" from an image and combine with "content" (features) in a new image. [Check out torch docs](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html).
 
-## Code snipets
+### Recurrent Neural Networks
+RNN's offer a way to incorporate __memmory__ to neural networks. This is useful for any sequential data, specially time series and text processing. This is archived by adding _memmory elements_
+
+<img src="img/lstm-unfolded.png" />
+
+#### TDNN (1989)
+Fist RNN kind, the past inputs where added as features. The problem is that only looks at a _fixed_ window of past inputs (as much as it defined by network architecture).
+
+#### Simple RNN / Elman Network (1990)
+Pending...   
+
+#### The vanishing gradient problem
+The vanishing gradient its a problem in  which the contribution of information decays geometrically over time. Then
+capturing relationships that span more than 8 or 10 steps back becomes practically impossible.  
+
+$$\tiny \frac{\partial y}{\partial w_{ij}} \small \frac{\partial y}{\partial w_{ij}} \large \frac{\partial y}{\partial w_{ij}} \LARGE \frac{\partial y}{\partial w_{ij}} \Huge \frac{\partial y}{\partial w_{ij}}$$
+
+#### LSTM (1997)
+To fix the vanishing gradient problems, [Long Short-Term Memory Cells cell are created](http://www.bioinf.jku.at/publications/older/2604.pdf), which can keep fixed some signals (_state variables_) by using gates, and then introduce  them or not in proper time in the future.
+
+<img src="img/lstm-cell.png" />
+
+#### Gated Recurrent Units (GRUs)
+LSTM variant...
+
+### Generative Adversarial Networks
+GAN's are unsupervised model, that allow to generate new data. They are two coupled networks:
+* The Generator: a network which tries to "fool" the second networks
+* The discriminator: a classifier which tries to detect the origin natural or created of content
+
+Both networks learn together, as the second net become better at classify inputs, the first has to become better at generating them in order to "fool it".  
+<img src="img/gans.jpg" />
+
+#### DCGAN (Deep Convolutional Generative Adversarial Network)
+Are specialized GAN on spacial data, where:
+* The discriminator: its a convolutional neural network that aims to classify data as real or fake
+* The generator: its a transpose convolutional network that aims to upsample a latent veztor $$z$$ and generate realistic images that can fool the discriminator.
+
+__Architecture guidelines for stable DCGANs:__  
+* Replace any pooling layers with strided convolutions (discriminator) and fractional-strided convolutions (generator)
+* Use batch normalization in both the generator and the discriminator
+* Remove fully connected hidden layers for deeper architectures
+* Use ReLU activation in generator for all layers except the output, which uses Tanh
+* Use LeakyReLU activation in the discriminator for all layers
+
+DCGAN paper: [Unsupervised Representational Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/pdf/1511.06434.pdf)
+
+## Code snippets
 ### Data loaders
 
 ### GPU auto

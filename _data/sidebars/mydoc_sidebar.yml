@@ -24,6 +24,9 @@ entries:
     - title: "* Activation Function"
       url: /deep-learning.html#activation-function
       output: web, pdf
+    - title: "Transforming Code into Beautiful, Idiomatic Python"
+      external_url: https://github.com/JeffPaine/beautiful_idiomatic_python
+      output: web
 #
 #   - title:
 #     output: pdf
