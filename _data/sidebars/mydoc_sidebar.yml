@@ -12,6 +12,9 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: Python 3
+      url: /python.html
+      output: web, pdf
     - title: Classical statistics
       url: /classical-statistics.html
       output: web, pdf
