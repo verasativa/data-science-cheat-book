@@ -79,6 +79,9 @@ To fix the vanishing gradient problems, [Long Short-Term Memory Cells cell are c
 #### Gated Recurrent Units (GRUs)
 LSTM variant...
 
+#### Attention, transformers and GP2
+Pending...
+
 ### Generative Adversarial Networks
 GAN's are unsupervised model, that allow to generate new data. They are two coupled networks:
 * The Generator: a network which tries to "fool" the second networks
@@ -90,7 +93,17 @@ Both networks learn together, as the second net become better at classify inputs
 #### Deep Convolutional Generative Adversarial Network (2016)
 Are specialized GAN on spacial data, where:
 * The discriminator: its a convolutional neural network that aims to classify data as real or fake
-* The generator: its a transpose convolutional network that aims to upsample a latent veztor $$z$$ and generate realistic images that can fool the discriminator.
+* The generator: its a transpose convolutional network that aims to upsample a latent vector $$z$$ and generate realistic images that can fool the discriminator.
+
+#### Pix2pix (2018)
+If you treat generator, as a decoder, adding a encoder before, which you feed with a image of domain A. And, feed the discriminator with a pair of images, the original domain A, and original/generated domain B, so tries to determine if the output (domain B) image is a fake or real pair of original (domain A). It needs paired image data.
+
+Links:  
+Paper: [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)  
+[Cat draw to can photo demo](https://affinelayer.com/pixsrv/)
+
+#### CycleGAN
+
 
 __Architecture guidelines for stable DCGANs:__  
 * Replace any pooling layers with strided convolutions (discriminator) and fractional-strided convolutions (generator)
@@ -109,6 +122,12 @@ It's called "batch" normalization because, during __training__, we normalize eac
 
 
 Batch normalization paper:  [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
+
+__Guidelines for adding batch norm:__  
+* Add batch norm layers inside ```__init__``` function
+* Layers with batch normalization do not include a bias term. So, for linear or convolutional layers, you'll need to set ```bias=False``` if you plan to add batch normalization on the outputs.
+* Be sure of using the appropriate _n dimentions_ norm layer (```torch.nn.BatchNorm1d```, ```torch.nn.BatchNorm2d``` or ```torch.nn.BatchNorm3d```)
+* Add the batch normalization layer __before__ calling the activation function, so it always goes layer > batch norm > activation.
 
 ## Code snippets
 ### Data loaders
