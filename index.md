@@ -19,7 +19,9 @@ docker-compose up
 
 ## Business
 [Why we have to test](https://dealbook.nytimes.com/2012/08/02/knight-capital-says-trading-mishap-cost-it-440-million/)
+Why do so many incompetent men become leaders?
 
+On leadership: [video](https://www.youtube.com/watch?v=zeAEFEXvcBg) | [book](https://www.goodreads.com/en/book/show/41959331-why-do-so-many-incompetent-men-become-leaders)
 ## Maker
 
 [raspberry HD video recording](https://www.arrow.com/en/research-and-events/articles/pi-bandwidth-with-video)
