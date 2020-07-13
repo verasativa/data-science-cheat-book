@@ -30,6 +30,9 @@ entries:
     - title: "Transforming Code into Beautiful, Idiomatic Python"
       external_url: https://github.com/JeffPaine/beautiful_idiomatic_python
       output: web
+    - title: "ML para ejecutivos"
+      url: /muggles.html
+      output: web, pdf
 #
 #   - title:
 #     output: pdf
