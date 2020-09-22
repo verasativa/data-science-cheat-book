@@ -53,9 +53,16 @@ sudo ./NVIDIA-Linux-x86_64-440.64.00.run
 ## Misc
 ### Streaming
 [from ffmpeg to python](https://github.com/kkroening/ffmpeg-python/blob/master/examples/README.md#jupyter-stream-editor)
+
 [ffmpeg streaming docs](https://trac.ffmpeg.org/wiki/StreamingGuide)
+
 [ffserver](https://trac.ffmpeg.org/wiki/ffserver)
+
 [obs and ffmpeg streaming](https://obsproject.com/forum/resources/obs-studio-send-an-udp-stream-to-a-second-pc-using-obs.455/)
+
 ### Other
 [Voice Activity Detector](https://github.com/wiseman/py-webrtcvad)
+
 [pyro tutorial](https://mltrain.cc/events/mltrain-uai-2018/)
+
+[last models](https://paperswithcode.com/)
