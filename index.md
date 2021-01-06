@@ -14,8 +14,10 @@ docker build
 docker-compose up
 ```
 
-## Cookiecutter
+## DVC
 [dvc and mlflow data science cookiecutter](https://github.com/iKintosh/cookiecutter-data-science)
+[dvc.yaml schema](https://github.com/iterative/dvcyaml-schema)
+[git hook to avoid commiting large files](https://gist.github.com/guysmoilov/ddb3329e31b001c1e990e08394a08dc4)
 
 ## Business
 [Why we have to test](https://dealbook.nytimes.com/2012/08/02/knight-capital-says-trading-mishap-cost-it-440-million/)
@@ -66,3 +68,5 @@ sudo ./NVIDIA-Linux-x86_64-440.64.00.run
 [pyro tutorial](https://mltrain.cc/events/mltrain-uai-2018/)
 
 [last models](https://paperswithcode.com/)
+
+[crowd journalism](https://www.bellingcat.com/)
